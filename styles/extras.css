@@ -73,3 +73,23 @@ body{margin:0;background:var(--bg,#F4F1EA)}
 .trailer{position:relative;background:#1d1b17;display:grid;place-items:center;aspect-ratio:16/10;width:100%;overflow:hidden}
 .trailer .cap{position:absolute;left:16px;right:16px;bottom:14px;font-family:var(--f-mono),monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#B8AF9F}
 @media (max-width:700px){.bio-grid{grid-template-columns:minmax(0,1fr) !important}.bio-grid > div:last-child{order:-1 !important;max-width:200px}}
+
+/* link-buttons: school.css's `.s a{color:inherit}` outranks .btn-* colours, so restate them */
+.s a.btn{color:var(--ink)}
+.s a.btn:hover{color:var(--paper)}
+.s a.btn-primary,.s a.btn-primary:hover{color:var(--accent-ink)}
+.s a.btn-ink{color:var(--paper)}
+.s a.btn-ink:hover{color:var(--paper)}
+.foot a.btn-primary{color:var(--accent-ink)}
+.s a.link{color:var(--ink)}
+.s a.link:hover{color:var(--accent)}
+@media (max-width:480px){
+  .nav-in{gap:8px}
+  .wordmark{gap:8px}
+  .wordmark b{font-size:18px}
+  .wordmark span:last-child{font-size:9px;padding:1px 4px;letter-spacing:.08em}
+  .nav .btn{padding:0 12px}
+}
+.dgrid{grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr))}
+.avatar{font-size:14px;letter-spacing:-.03em}
+.avatar.lg{font-size:24px}
