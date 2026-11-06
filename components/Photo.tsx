@@ -1,9 +1,8 @@
-import fs from "fs";
-import path from "path";
+import { PHOTOS } from "@/content/photo-manifest";
 import Image from "next/image";
 
 export function photoExists(slot: string) {
-  return fs.existsSync(path.join(process.cwd(), "public", "images", `${slot}.jpg`));
+  return PHOTOS.includes(slot);
 }
 type P = { slot: string; alt: string; ratio?: string; cap?: string; priority?: boolean; sizes?: string; bw?: boolean; className?: string; style?: React.CSSProperties; scrim?: boolean };
 /** A graded photograph. If the file isn't in /public/images yet, the grey placeholder shows with its caption. */

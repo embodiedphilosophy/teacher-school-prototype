@@ -29,9 +29,9 @@ export function CourseRow({ c }: { c: Course }) {
       <span className="cc-code">{c.code}</span>
       <span className="serif" style={{ fontSize: 19, lineHeight: 1.2 }}>{c.title}</span>
       <span className="hide-sm small">{f?.name}</span>
-      <span className="hide-sm mono small">{FORMAT_SHORT[c.format]}</span>
       <span className="hide-sm mono small">{c.units} units</span>
-      <span className="hide-sm small">{c.start}</span>
+      <span className="hide-sm mono small">{c.weeks} wks</span>
+      <span className="hide-sm mono small">{FORMAT_LABEL[c.format]}</span>
       <span>{c.ce ? <span className="ce">CE</span> : null}</span>
     </Link>
   );
